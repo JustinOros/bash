@@ -2,7 +2,6 @@
 
 # rotate screen clockwise once
 # by Justin Oros
-# revised FEB 12 2020
 
 myScreenTypes="VGA HDMI DP eDP"
 myScreenRotations="normal right inverted left normal"
