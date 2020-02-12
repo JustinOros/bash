@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# rotate screen clockwise once
+# rotate screen clockwise in a complete circle once
 # by Justin Oros
 
 myScreenTypes="VGA HDMI DP eDP"
