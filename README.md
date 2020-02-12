@@ -1,2 +1,2 @@
 # bash_scripts
-A collection of handy Bash Scripts
+A collection of Bash Scripts
