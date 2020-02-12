@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# rotate all screens clockwise once
+# rotate screen clockwise once
 # by Justin Oros
 # revised FEB 12 2020
 
