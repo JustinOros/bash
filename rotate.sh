@@ -16,7 +16,6 @@ rotate() {
 		printf "Attempting to rotate screens $screen_rotation...\n"
 		for screen_type in $screen_types
 		do
-
 			for screen in 0 .. $screens
 			do
 				xrandr --output $screen_type-$screen --rotate $screen_rotation > /dev/null 2>&1
