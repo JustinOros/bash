@@ -1,23 +1,28 @@
 #!/bin/bash
 
-# rotate screen clockwise in a complete circle once
+# rotate all screens clockwise in a complete circle
 # by Justin Oros
 
-myScreenTypes="VGA HDMI DP eDP"
-myScreenRotations="normal right inverted left normal"
-myScreenNum=1
-mySleepTime=3
-myDisplay=:0
+screen_types="VGA HDMI DP eDP"
+screen_rotations="right inverted left normal"
+screens=4
+sleep_time=3
+display=:0
 
 rotate() {
-export DISPLAY=$myDisplay
-for myScreenRotation in $myScreenRotations
-do
-	for myScreenType in $myScreenTypes
+	export DISPLAY=$display
+	for screen_rotation in $screen_rotations
 	do
-		xrandr --output $myScreenType-$myScreenNum --rotate $myScreenRotation > /dev/null 2>&1
-		sleep $mySleepTime
+		printf "Attempting to rotate screens $screen_rotation...\n"
+		for screen_type in $screen_types
+		do
+
+			for screen in 0 .. $screens
+			do
+				xrandr --output $screen_type-$screen --rotate $screen_rotation > /dev/null 2>&1
+			done
+		done
+		sleep $sleep_time
 	done
-done
 }
 rotate
