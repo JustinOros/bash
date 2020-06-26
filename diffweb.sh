@@ -1,4 +1,6 @@
-# diffweb - Notify user if a website has changed
+#!/bin/bash
+
+# diffweb - Checks a website for changes
 # Usage: diffweb https://domain.tld
 # Author: Justin Oros
 # Revised: 2020 JUNE 25
