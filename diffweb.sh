@@ -1,8 +1,8 @@
 #!/bin/bash
-# diffweb - Checks a website for changes
+# diffweb: Check a website for changes
 # Usage: diffweb https://domain.tld
 # Author: Justin Oros
-# Revised: 2020 JUNE 25
+# Source: https://github.com/JustinOros/bash_scripts/blob/master/diffweb.sh
 
 FILE1=/tmp/file1
 FILE2=/tmp/file2
