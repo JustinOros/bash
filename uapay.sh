@@ -51,9 +51,17 @@ uapay_filter="and a pay of"
 # Query URL
 uapay_output=$(curl -s -k --user-agent $uapay_useragent $uapay_url/$uapay_name-4329 | grep "$uapay_filter")
 
+# Check output
+{
+if [ -z "$uapay_output" ]; then
+    echo -e "\n$1 $2 was not found.\n"
+    exit 0
+fi
+}
+
 # Format output
-#echo ${uapay_output/<\/p>/}
 uapay_output=${uapay_output/\<p class=\"lead font-16 font-weight-400\"\>/}
 uapay_output=${uapay_output/\<\/p\>/}
 
+# Print output
 echo -e "\n$uapay_output\n"
