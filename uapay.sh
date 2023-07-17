@@ -1,9 +1,8 @@
 #!/bin/bash
-#################################################
-# Query Univeristy of Arizona payroll information
-# Written by Justin Oros
-# Usage: uapay.sh FirstName LastName
-#################################################
+# Description: Query UofA employee payroll data via CLI
+# Usage: uapay.sh <first name> <last name>
+# Author: Justin Oros
+# Source: https://github.com/JustinOros
 
 # BASH present?
 if [ ! -f /bin/bash ]; then
