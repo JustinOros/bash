@@ -1,7 +1,8 @@
 #!/bin/bash
-
-# rotate all screens clockwise in a complete circle
-# by Justin Oros
+# Description: Rotate screen clockwise in a complete circle
+# Usage: rotate.sh
+# Author: Justin Oros
+# Source: https://github.com/JustinOros
 
 screen_types="VGA HDMI DP eDP"
 screen_rotations="right inverted left normal"
@@ -18,7 +19,7 @@ rotate() {
 		do
 			for screen in 0 .. $screens
 			do
-				xrandr --output $screen_type-$screen --rotate $screen_rotation > /dev/null 2>&1
+				xrandr -o $screen_rotation > /dev/null 2>&1
 			done
 		done
 		sleep $sleep_time
